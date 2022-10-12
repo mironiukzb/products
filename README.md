@@ -64,6 +64,9 @@ Without auth:
 
 With basic auth:
 /api/product (POST)
+
 /api/list   (GET)
+
 /api/update/{id} (PATCH)
+
 /api/{id}   (DELETE)
