@@ -9,3 +9,13 @@ MySQL Database
 ## Installation
 
 Copy repository
+
+```bash
+
+git clone https://github.com/mironiukzb/products.git
+
+or
+
+git clone git@github.com:mironiukzb/products.git
+
+```
