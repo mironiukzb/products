@@ -60,13 +60,15 @@ php artisan create:user
 ## Endpoints
 
 Without auth:
+
 /api/products (GET)
 
 With basic auth:
+
 /api/product (POST)
 
 /api/list   (GET)
 
-/api/update/{id} (PATCH)
+/api/update/{product} (PATCH)
 
-/api/{id}   (DELETE)
+/api/{product}   (DELETE)
