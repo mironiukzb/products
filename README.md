@@ -43,3 +43,16 @@ DB_PASSWORD=
 
 ```
 
+Create tables in database by migrations
+
+```bash
+
+php artisan migrate
+
+```
+
+Create user account for basic auth (login:user123@example.com password: password123)
+
+```bash
+php artisan create:user
+```
