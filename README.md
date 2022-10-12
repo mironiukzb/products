@@ -56,3 +56,14 @@ Create user account for basic auth (login:user123@example.com password: password
 ```bash
 php artisan create:user
 ```
+
+## Endpoints
+
+Without auth:
+/api/products (GET)
+
+With basic auth:
+/api/product (POST)
+/api/list   (GET)
+/api/update/{id} (PATCH)
+/api/{id}   (DELETE)
