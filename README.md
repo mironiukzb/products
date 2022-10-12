@@ -3,7 +3,9 @@
 ## Requirements
 
 PHP 8.0
+
 Laravel 9.34.0
+
 MySQL Database
 
 ## Installation
@@ -27,4 +29,17 @@ CREATE DATABASE products
 ```
 
 Create in project's root directory file .env, and copy all contents from .env.example file to them
+
+In .evn file, set your database connection 
+
+```bash
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=products
+DB_USERNAME=root
+DB_PASSWORD=
+
+```
 
