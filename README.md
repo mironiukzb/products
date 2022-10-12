@@ -19,3 +19,12 @@ or
 git clone git@github.com:mironiukzb/products.git
 
 ```
+
+In your database client create database 'products'
+
+```sql
+CREATE DATABASE products
+```
+
+Create in project's root directory file .env, and copy all contents from .env.example file to them
+
