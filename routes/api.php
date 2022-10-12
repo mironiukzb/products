@@ -24,8 +24,8 @@ Route::group(['middleware' => 'auth.basic', 'prefix' => '/product'], function ()
     Route::name('product.')->group(function () {
         Route::get('list', [ProductController::class, 'list'])->name('list');
         Route::post('', [ProductController::class, 'store'])->name('store');
-        Route::delete('/{id}', [ProductController::class, 'destroy'])->name('delete');
-        Route::patch('/update/{id}', [ProductController::class, 'update'])->name('update');
+        Route::delete('/{product}', [ProductController::class, 'destroy'])->name('delete');
+        Route::put('/update/{product}', [ProductController::class, 'update'])->name('update');
     });
 });
 

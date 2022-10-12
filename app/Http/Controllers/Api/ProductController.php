@@ -31,10 +31,9 @@ class ProductController extends Controller
     {
         $request->validated();
         $input = $request->all();
-        $id = isset($input['id']) ? $input['id'] : null;
-        $product = Product::createOrUpdate($input, $id);
+        $product = Product::create($input);
 
-        return json_encode($product);
+        return response()->json(compact('product'));
     }
 
     /**
@@ -56,12 +55,12 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(ProductChangeRequest $request, $id)
+    public function update(ProductChangeRequest $request, Product $product)
     {
-        $request['id'] = $id;
-        $response = $this->store($request);
+        $request->validated();
+        $product->update($request->all());
 
-        return $response;
+        return response()->json(compact('product'));
     }
 
     /**
@@ -70,10 +69,11 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        Product::destroy($id);
-        return response()->json($id);
+        $product->delete();
+        
+        return response()->json('Product deleted');
     }
 
 
